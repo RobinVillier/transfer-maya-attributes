@@ -1,0 +1,99 @@
+:root {
+    bg-maya: #444444;
+    bg-hover: #6a6a6a;
+    bg-item: #545454;
+    bg-selected: #5285a6;
+    shadow-s : inset 0 1px 2px #ffffff30, /* top highlight */0 1px 2px #00000030, /* dark shadow */0 2px 4px #00000015; /* soft shadow */
+    shadow-m : inset 0 1px 2px #ffffff50, /* top highlight */0 2px 4px #00000030, /* dark shadow */0 4px 8px #00000015; /* soft shadow */
+    shadow-l : inset 0 1px 2px #ffffff70, /* top highlight */0 4px 6px #00000030, /* dark shadow */0 6px 10px #00000015; /* soft shadow */
+}
+
+QPushButton {
+    background: #666;
+    border-radius: 3px;
+    min-height: 30px;
+}
+
+QPushButton:hover {
+    background: @bg-selected;
+}
+
+QPushButton:pressed {
+    background: #28658d;
+}
+
+QPushButton#down_button {
+    background: #D34747;
+}
+
+QPushButton:hover#down_button {
+    background: #D56868;
+}
+
+QPushButton:pressed#down_button {
+    background: #A22B2B;
+}
+
+QPushButton#up_button {
+    background: #2BCB5D;
+}
+
+QPushButton:hover#up_button {
+    background: #5ADC83;
+}
+
+QPushButton:pressed#up_button {
+    background: #28A951;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+}
+
+QScrollBar::handle:vertical {
+    background: #666;
+    min-height: 30px;
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:vertical {
+    background: none;
+}
+
+QScrollBar::sub-line:vertical {
+    background: none;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QListView {
+    background: @bg-maya;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+QListView:focus {
+    outline: none;
+}
+
+QListView::item {
+    background: @bg-item;
+    border-radius: 6px;
+    margin: 5px 5px;
+    padding: 5px;
+    min-height: 30px;
+}
+
+QListView::item:hover {
+    background: @bg-hover;
+}
+
+QListView::item:selected {
+    background: @bg-selected;
+}
