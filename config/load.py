@@ -1,9 +1,20 @@
 import re
+import os
+import json
 
 
-# def load_stylesheet(path):
-#     with open(path, "r", encoding="utf-8") as f:
-#         return f.read()
+def open_json(file_path):
+    if os.path.isfile(file_path):
+        with open(file_path, 'r') as jsonfile:
+            jsondata = ''.join(line for line in jsonfile if not line.startswith('//'))
+            data = json.loads(jsondata)
+            return data
+    return {}
+
+
+def save_json(file_path, content):
+    with open(file_path, 'w') as f:
+        json.dump(content, f, indent=4)
 
 
 def load_stylesheet(path: str):
@@ -23,9 +34,9 @@ def load_stylesheet(path: str):
             color: white;
         }
     """
-
     invalid_syntax = Exception('Invalid syntax')
     stylesheet = ''
+
     with open(path, 'r') as file:
         root_block = 0
         variables = dict[str, str]()
@@ -45,22 +56,33 @@ def load_stylesheet(path: str):
                 else:
                     stylesheet = file.read()
                     break
-            # If it's safe to read, then split the key, values by a colon
+
             if root_block == 2:
                 split = line.split(':')
 
-                # Expect exactly two elements: key and value
                 if len(split) == 2:
                     key, value = split
                     variables[key.strip()] = value.strip()
                 else:
                     raise invalid_syntax
 
-    # This pattern uses a logical OR to capture the words in the brackets
-    # The dictionary keys are sorted in reversed since the regex engine only captures the first occurrence
-    # If p.e. "primary" is set before "primary-dark" then it will only capture "primary"
     pattern = re.compile('@(' + '|'.join(sorted(variables, key=len, reverse=True)).strip('|') + ')')
-    # Replace each match with the value of the variables dictionary (group 0 is a match that contains the @)
     stylesheet = pattern.sub(lambda match: variables[match.group(1)], stylesheet)
 
     return stylesheet
+
+
+def load_qss_with_fixed_urls(qss_path):
+    base_dir = os.path.dirname(qss_path)
+
+    qss = load_stylesheet(qss_path)
+
+    def replace_url(match):
+        relative_path = match.group(1).strip('\'"')
+        absolute_path = os.path.abspath(os.path.join(base_dir, relative_path))
+
+        qt_path = absolute_path.replace("\\", "/")
+        return f"url({qt_path})"
+
+    fixed_qss = re.sub(r'url\(([^)]+)\)', replace_url, qss)
+    return fixed_qss

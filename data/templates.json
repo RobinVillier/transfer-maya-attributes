@@ -1,0 +1,122 @@
+{
+    "Standard_Fingers": {
+        "SWITCH": {
+            "min": 0.0,
+            "max": 0.0,
+            "default": 0.0,
+            "type": "enum",
+            "keyable": false,
+            "locked": true,
+            "enum_list": [
+                "------------"
+            ]
+        },
+        "ikFk": {
+            "min": 0.0,
+            "max": 1.0,
+            "default": 0.0,
+            "type": "bool",
+            "keyable": true,
+            "locked": false
+        },
+        "deformers": {
+            "min": 0.0,
+            "max": 1.0,
+            "default": 0.0,
+            "type": "bool",
+            "keyable": true,
+            "locked": false
+        },
+        "FINGERS": {
+            "min": 0.0,
+            "max": 1.0,
+            "default": 0.0,
+            "type": "enum",
+            "keyable": false,
+            "locked": true,
+            "enum_list": [
+                "------------"
+            ]
+        },
+        "thumb": {
+            "min": -10.0,
+            "max": 20.0,
+            "default": 0.0,
+            "type": "double",
+            "keyable": true,
+            "locked": false
+        },
+        "index": {
+            "min": -10.0,
+            "max": 20.0,
+            "default": 0.0,
+            "type": "double",
+            "keyable": true,
+            "locked": false
+        },
+        "mid": {
+            "min": -10.0,
+            "max": 20.0,
+            "default": 0.0,
+            "type": "double",
+            "keyable": true,
+            "locked": false
+        },
+        "ring": {
+            "min": -10.0,
+            "max": 20.0,
+            "default": 0.0,
+            "type": "double",
+            "keyable": true,
+            "locked": false
+        },
+        "pinky": {
+            "min": -10.0,
+            "max": 20.0,
+            "default": 0.0,
+            "type": "double",
+            "keyable": true,
+            "locked": false
+        },
+        "fist": {
+            "min": -10.0,
+            "max": 20.0,
+            "default": 0.0,
+            "type": "double",
+            "keyable": true,
+            "locked": false
+        },
+        "spread": {
+            "min": -10.0,
+            "max": 10.0,
+            "default": 0.0,
+            "type": "double",
+            "keyable": true,
+            "locked": false
+        },
+        "SPACES": {
+            "min": 0.0,
+            "max": 0.0,
+            "default": 0.0,
+            "type": "enum",
+            "keyable": true,
+            "locked": true,
+            "enum_list": [
+                "------------"
+            ]
+        },
+        "ikArm": {
+            "min": 0.0,
+            "max": 2.0,
+            "default": 0.0,
+            "type": "enum",
+            "keyable": true,
+            "locked": false,
+            "enum_list": [
+                "world",
+                "hips",
+                "clavicles"
+            ]
+        }
+    }
+}

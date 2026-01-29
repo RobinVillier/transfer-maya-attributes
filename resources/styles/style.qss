@@ -19,13 +19,23 @@ QPushButton:pressed {
     background: #28658d;
 }
 
+QPushButton:hover#cancel_btn {
+    color: #892424;
+    background: #D56868;
+}
 
-QPushButton:hover#copy_btn {
+QPushButton:pressed#cancel_btn {
+    color: #892424;
+    background: #A22B2B;
+}
+
+
+QPushButton:hover#validation_btn {
     color: #036d19;
     background: #5ADC83;
 }
 
-QPushButton:pressed#copy_btn {
+QPushButton:pressed#validation_btn {
     color: #036d19;
     background: #28A951;
 }
@@ -80,4 +90,40 @@ QListView::item:hover {
 
 QListView::item:selected {
     background: @bg-selected;
+}
+
+#Titles {
+    font: bold italic;
+    font-size: 14px;
+}
+
+QComboBox {
+    border: 1px solid #666;
+    border-radius: 3px;
+    padding: 1px 1px 1px 3px;
+    height: 20px;
+    /* min-width: 6em; */
+}
+
+QComboBox:hover {
+    border: 1px solid #999;
+}
+
+QComboBox::drop-down {
+    width: 20px;
+    padding-left: 25px;
+    border: none;
+}
+
+QComboBox::down-arrow {
+    image: url(../icons/down_arrow_white.svg);
+    width: 18px;
+    height: 18px;
+}
+
+QComboBox QAbstractItemView {
+    background: #2e2e2e;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 4px 8px;
 }
