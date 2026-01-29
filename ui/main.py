@@ -9,7 +9,7 @@ def get_maya_main_window() -> QtWidgets.QWidget:
 
 
 def launch():
-    from CopyAttrs.ui.main_window import CopyAttributesWindow
+    from TransferAttrs.ui.main_window import CopyAttributesWindow
 
     window = CopyAttributesWindow(get_maya_main_window())
     window.show()
