@@ -35,10 +35,10 @@ class TransferAttributesWindow(QtWidgets.QDialog):
         master_layout.addWidget(self.list_title)
         master_layout.addWidget(self.attr_list_widget)
         master_layout.addLayout(self.btm_button_layout)
-        master_layout.addWidget(self.templates_title)
         master_layout.addSpacing(5)
         master_layout.addWidget(self.templates_divider)
         master_layout.addSpacing(5)
+        master_layout.addWidget(self.templates_title)
         master_layout.addWidget(self.templates_cbb)
         master_layout.addLayout(self.io_button_layout)
 

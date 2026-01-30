@@ -102,7 +102,6 @@ QComboBox {
     border-radius: 3px;
     padding: 1px 1px 1px 3px;
     height: 20px;
-    /* min-width: 6em; */
 }
 
 QComboBox:hover {
@@ -125,5 +124,5 @@ QComboBox QAbstractItemView {
     background: #2e2e2e;
     border: 1px solid #999;
     border-radius: 6px;
-    padding: 4px 8px;
+    padding: 4px;
 }
