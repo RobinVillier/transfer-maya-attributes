@@ -3,7 +3,7 @@
 
 A Maya tool for transfering custom attributes with an efficient UI.
 
-<img width="302" height="833" alt="image" src="https://github.com/user-attachments/assets/ba60463f-9857-4ba0-b869-f29411a821e1" />
+<img width="297" height="536" alt="image" src="https://github.com/user-attachments/assets/5f07d401-72f7-405d-99d3-33508ab34d1e" />
 
 ## Features
 
