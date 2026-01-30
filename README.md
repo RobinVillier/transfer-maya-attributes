@@ -52,7 +52,7 @@ at.transfer_attributes(attrs_data_dict)
 
 ## Requirements
 
-- Autodesk Maya (up to 2025).
+- Autodesk Maya (up to 2025, go to my [gumroad](https://redfoxx.gumroad.com/l/reorder-maya-attributes) for 2026 version and above).
 - PySide2/PyQt5.
 
 ## Contact
