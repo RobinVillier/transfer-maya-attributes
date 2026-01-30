@@ -3,6 +3,8 @@
 
 A Maya tool for transfering custom attributes with an efficient UI.
 
+<img width="302" height="833" alt="image" src="https://github.com/user-attachments/assets/ba60463f-9857-4ba0-b869-f29411a821e1" />
+
 ## Features
 
 - Transfer any attributes from any Maya nodes to another (even locked and non keyable attributes).
